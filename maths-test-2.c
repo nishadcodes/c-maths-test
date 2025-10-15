@@ -35,7 +35,6 @@ main()
         default:
             printf("Entering GOD MODE!!!!\n");
             max = GODMAX;
-            break; // i know not required, in case new case is added, it will save me. written in the officia ansi c book
     }
 
     while (userans != 'q')
