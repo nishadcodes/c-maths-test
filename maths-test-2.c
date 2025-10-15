@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h> //random
 #include<time.h> //random init
-#include<conio.h>//getchar() but no \n required
+#include<conio.h>//getchar() but no <enter> required
 #include<windows.h>//sleep
 #define EASYMAX 11
 #define MEDMAX 22
@@ -21,22 +21,21 @@ main()
     printf("t for true, f for false or q to exit\n");
     printf("What is your difficulty?(e)asy, m)edium, h)ard or g)od)");
     scanf("%c", &lvl);
-    if (lvl == 'e')
+    switch(lvl)
     {
-        max = EASYMAX;
-    }
-    else if (lvl == 'm')
-    {
-        max = MEDMAX;
-    }
-    else if (lvl == 'h')
-    {
-        max = HARDMAX;
-    }
-    else
-    {
-        printf("Entering GOD MODE!!!!\n");
-        max = GODMAX;
+        case 'e':
+            max = EASYMAX;
+            break;
+        case 'm':
+            max = MEDMAX;
+            break;
+        case 'h':
+            max = HARDMAX;
+            break;
+        default:
+            printf("Entering GOD MODE!!!!\n");
+            max = GODMAX;
+            break; // i know not required, in case new case is added, it will save me. written in the officia ansi c book
     }
 
     while (userans != 'q')
